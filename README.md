@@ -6,7 +6,7 @@ This project causes an infinite loop. To reproduce:
   sudo npm install
 
 
-2- Run (I have tried it on plunker and could not reproduce the infinite loop):
+2- Run (I have tried it on plunker at http://plnkr.co/edit/DjzQu63eMkKWG2O16PMN and could not reproduce the infinite loop):
   node minimalApp.js
 
 3- Request it from your browser. Something like:
