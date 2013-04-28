@@ -1,0 +1,41 @@
+!!!
+html
+  head
+    meta(http-equiv='X-UA-Compatible',content='IE=edge,chrome=1')
+    script
+      document.write('<base href="' + document.location + '" />');
+  body(ng-app='minimalApp')
+    p Index Page That Contains ng-view below:
+    div(ng-view)
+    p 
+      a(ng-href="p1/p2") p1p2
+    p
+      a(ng-href="#") /
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js")
+    script
+      'use strict';
+      var minimalApp = angular.module('minimalApp', []).
+        config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+          $routeProvider.
+            when('/', {
+              templateUrl: 'partials/template1',
+              controller: ChapterCntl
+            }).
+            when('/p1/p2', {
+              templateUrl: 'partials/template2',
+              controller: IndexCtrl
+            }).
+            otherwise({
+              redirectTo: '/'
+            });
+      
+          $locationProvider.html5Mode(true);
+        }]);
+
+      function IndexCtrl($scope) {
+      }
+
+      function ChapterCntl($scope, $routeParams) {
+        $scope.name = "ChapterCntl";
+        $scope.params = $routeParams;
+      }    
