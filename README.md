@@ -1,19 +1,20 @@
-## Readme
-
-
-###UPDATE:
+## UPDATE:
 
 Infinite loop problem can be avoided by setting base href to '/' instead of document.location and by prefixing templateUrls with '/'.
 
 This fix is in commit #fe2e4dc7575cc09a1fb100ec3950aa106c67cd3f.
 
 To see all comments: http://stackoverflow.com/questions/16259890/angularjs-infinite-loop
-============================
 
 
-This project causes an infinite loop. To reproduce:
+====
 
-1- Download and create node_modules by executing:
+
+This project was created to replicate an infinite loop. To reproduce:
+
+1- Download a version before the commit mentioned above 
+
+2- Create node_modules by executing:
 
 ````
   sudo npm install
