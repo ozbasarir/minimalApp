@@ -7,8 +7,7 @@ This fix is in commit #fe2e4dc7575cc09a1fb100ec3950aa106c67cd3f.
 To see all comments: http://stackoverflow.com/questions/16259890/angularjs-infinite-loop
 
 
-====
-
+## Instructions
 
 This project was created to replicate an infinite loop. To reproduce:
 
